@@ -17,7 +17,6 @@ curl -D - -X DELETE http://localhost:8082/asojobs/books/3d8a8911-a4b5-4af9-893f-
 //条件を指定する
 curl http://localhost:8082/asojobs/books?name="Spring徹底入門(Spring 4.2対応)"
 
-
 //これがレスポンスで帰ってきてほしいが、
 {
 "bookId": "3d8a8911-a4b5-4af9-893f-a5ba2336eea4",
