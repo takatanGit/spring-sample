@@ -1,0 +1,22 @@
+package com.example.bean;
+
+public class JsonBean {
+	
+	public ResultInfoBean resultInfoBean;
+	public FeatureBean	  featureBean;
+	public ResultInfoBean getResultinfoBean() {
+		return resultInfoBean;
+	}
+	public void setResultinfoBean(ResultInfoBean resultinfoBean) {
+		this.resultInfoBean = resultinfoBean;
+	}
+	public FeatureBean getFeatureBean() {
+		return featureBean;
+	}
+	public void setFeatureBean(FeatureBean featureBean) {
+		this.featureBean = featureBean;
+	}
+	
+	
+	
+}

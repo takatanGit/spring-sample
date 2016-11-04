@@ -1,0 +1,32 @@
+package com.example.bean;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Weather {
+	
+	@JsonProperty("Type")
+    private String[] type;
+	@JsonProperty("Date")
+    private String[] date;
+	@JsonProperty("Rainfall")
+    private Integer[] rainfall;
+	public String[] getType() {
+		return type;
+	}
+	public void setType(String[] type) {
+		this.type = type;
+	}
+	public String[] getDate() {
+		return date;
+	}
+	public void setDate(String[] date) {
+		this.date = date;
+	}
+	public Integer[] getRainfall() {
+		return rainfall;
+	}
+	public void setRainfall(Integer[] rainfall) {
+		this.rainfall = rainfall;
+	}
+	
+}

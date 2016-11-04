@@ -1,0 +1,22 @@
+package com.example.bean;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class Geometry {
+	private String Type;
+	private String Coordinates;
+	public String getType() {
+		return Type;
+	}
+	public void setType(String type) {
+		Type = type;
+	}
+	public String getCoordinates() {
+		return Coordinates;
+	}
+	public void setCoordinates(String coordinates) {
+		Coordinates = coordinates;
+	}
+	
+}

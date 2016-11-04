@@ -1,0 +1,32 @@
+package com.example.bean;
+
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public class Property {
+	@JsonProperty("WeatherAreaCode")
+    private int weatherAreaCode;
+	//@JsonProperty("WeatherList")
+    //private Weather[] weatherList;
+	private WeatherList WeatherList;
+	public WeatherList getWeatherList() {
+		return WeatherList;
+	}
+	public void setWeatherList(WeatherList weatherList) {
+		WeatherList = weatherList;
+	}
+	public Integer getWeatherAreaCode() {
+		return weatherAreaCode;
+	}
+	public void setWeatherAreaCode(Integer weatherAreaCode) {
+		this.weatherAreaCode = weatherAreaCode;
+	}
+	/*
+	public Weather[] getWeatherList() {
+		return weatherList;
+	}
+	public void setWeatherList(Weather[] weatherList) {
+		this.weatherList = weatherList;
+	}
+	*/
+}

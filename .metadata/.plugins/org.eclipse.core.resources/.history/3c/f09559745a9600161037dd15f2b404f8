@@ -1,0 +1,50 @@
+package com.example.bean;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class Feature {
+	@JsonProperty("Id")
+	private Integer Id;
+	
+	@JsonProperty("Name")
+	private String Name;
+	
+	@JsonProperty("Geometry")
+	private Geometry GeometryBean;
+	
+	@JsonProperty("Property")
+	private Object PropertyBean;
+	
+	@JsonProperty("Id")
+	public Integer getId() {
+		return Id;
+	}
+	public void setId(Integer id) {
+		Id = id;
+	}
+	
+	@JsonProperty("Name")
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	@JsonProperty("Geometry")
+	public Geometry getGeometryBean() {
+		return GeometryBean;
+	}
+	public void setGeometryBean(Geometry geometryBean) {
+		GeometryBean = geometryBean;
+	}
+	
+	@JsonProperty("Property")
+	public Object getPropertyBean() {
+		return PropertyBean;
+	}
+	public void setPropertyBean(Object propertyBean) {
+		PropertyBean = propertyBean;
+	}
+}

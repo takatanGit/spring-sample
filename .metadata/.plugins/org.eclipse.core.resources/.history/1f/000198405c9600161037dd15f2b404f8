@@ -1,0 +1,113 @@
+package com.example.bean;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@JsonIgnoreProperties(ignoreUnknown=true)
+public class Feature {
+	
+	@JsonProperty("Id")
+	private Integer Id;
+	
+	@JsonProperty("Name")
+	private String Name;
+	
+	@JsonProperty("Geometry")
+	private Geometry GeometryBean;
+	
+	@JsonProperty("Property")
+	private Object PropertyBean;
+	
+	@JsonProperty("Id")
+	public Integer getId() {
+		return Id;
+	}
+	public void setId(Integer id) {
+		Id = id;
+	}
+	
+	@JsonProperty("Name")
+	public String getName() {
+		return Name;
+	}
+	public void setName(String name) {
+		Name = name;
+	}
+	
+	@JsonProperty("Geometry")
+	public Geometry getGeometryBean() {
+		return GeometryBean;
+	}
+	public void setGeometryBean(Geometry geometryBean) {
+		GeometryBean = geometryBean;
+	}
+	
+	@JsonProperty("Property")
+	public Object getPropertyBean() {
+		return PropertyBean;
+	}
+	public void setPropertyBean(Object propertyBean) {
+		PropertyBean = propertyBean;
+	}
+	private static class Property {
+		@JsonProperty("WeatherAreaCode")
+        private WeatherAreaCode weatherAreaCode;
+		@JsonProperty("WeatherList")
+        private List<Weather> weatherList;
+		
+		@JsonProperty("WeatherAreaCode")
+		public WeatherAreaCode getWeatherAreaCode() {
+			return weatherAreaCode;
+		}
+		public void setWeatherAreaCode(WeatherAreaCode weatherAreaCode) {
+			this.weatherAreaCode = weatherAreaCode;
+		}
+		@JsonProperty("WeatherList")
+		public List<Weather> getWeatherList() {
+			return weatherList;
+		}
+		public void setWeatherList(List<Weather> weatherList) {
+			this.weatherList = weatherList;
+		}
+    }
+	
+    private static class WeatherAreaCode {
+    }
+
+    private static class Weather {
+    	@JsonProperty("Type")
+        private String type;
+    	@JsonProperty("Date")
+        private String date;
+    	@JsonProperty("Rainfall")
+        private String rainfall;
+    	
+    	@JsonProperty("Type")
+		public String getType() {
+			return type;
+		}
+		public void setType(String type) {
+			this.type = type;
+		}
+		
+		@JsonProperty("Date")
+		public String getDate() {
+			return date;
+		}
+		public void setDate(String date) {
+			this.date = date;
+		}
+		
+		@JsonProperty("Rainfall")
+		public String getRainfall() {
+			return rainfall;
+		}
+		public void setRainfall(String rainfall) {
+			this.rainfall = rainfall;
+		}
+
+    }
+
+	
+}
