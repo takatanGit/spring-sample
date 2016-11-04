@@ -1,0 +1,33 @@
+//request getBook method
+curl http://locahost:8082/asojobs/books/00000000-0000-0000-0000-00000000
+
+//request createBook
+curl -D - -H "Content-type: application/json" -X POST -d '{"name":"Spring徹底入門",
+"publishedDate":"2016-04-01"}' http://localhost:8082/asojobs/books
+
+//request put method
+curl -D - -H "Content-type: application/json" -X PUT -d '{"bookId":"3d8a8911-a4b5-4af9-893f-a5ba2336eea4","name":"Spring徹底入門(spring4.2対応)",
+"publishedDate":"2016-04-01"}'
+
+//request delete method
+curl -D - -X DELETE http://localhost:8082/asojobs/books/3d8a8911-a4b5-4af9-893f-a5ba2336eea4
+
+
+//request searchBooks method
+//条件を指定する
+curl http://localhost:8082/asojobs/books?name="Spring徹底入門(Spring 4.2対応)"
+
+
+//これがレスポンスで帰ってきてほしいが、
+{
+"bookId": "3d8a8911-a4b5-4af9-893f-a5ba2336eea4",
+"name": "Spring徹底入門",
+"publishedDate": "2016-04-01"
+}
+何故かこれがレスポンスで来る。
+[]
+
+//デバックしてみると
+日本語が文字化けをしている
+server.xmlとweb.xmlをしっかり見たが、
+しっかり設定がされてあるのに文字化けがしている。
